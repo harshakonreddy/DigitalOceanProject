@@ -1,0 +1,405 @@
+2017/04/09 23:12:35 ================
+2017/04/09 23:12:35  Starting test
+2017/04/09 23:12:35 ================
+2017/04/09 23:12:35 expected server port [8080]
+2017/04/09 23:12:35 concurrency level    [10]
+2017/04/09 23:12:35 unluckiness          [5]
+2017/04/09 23:12:35 TESTRUN Starting...
+2017/04/09 23:12:35 TESTRUN - Trying to remove, index, then remove again a large amount of packages
+2017/04/09 23:12:35 Step 1: Attempting to remove any previously installed packages (by failed test runs or whatever other reason)
+2017/04/09 23:12:35 Starting client[11]
+2017/04/09 23:12:35 client[11] connecting to [localhost:8080]
+2017/04/09 23:12:35 Starting client[2]
+2017/04/09 23:12:35 Starting client[3]
+2017/04/09 23:12:35 client[3] connecting to [localhost:8080]
+2017/04/09 23:12:35 Starting client[5]
+2017/04/09 23:12:35 client[5] connecting to [localhost:8080]
+2017/04/09 23:12:35 Starting client[8]
+2017/04/09 23:12:35 client[8] connecting to [localhost:8080]
+2017/04/09 23:12:35 Starting client[7]
+2017/04/09 23:12:35 client[7] connecting to [localhost:8080]
+2017/04/09 23:12:35 client[2] connecting to [localhost:8080]
+2017/04/09 23:12:35 client[8] brute-forcing removal of 337 packages
+2017/04/09 23:12:35 Starting client[9]
+2017/04/09 23:12:35 client[9] connecting to [localhost:8080]
+2017/04/09 23:12:35 Starting client[6]
+2017/04/09 23:12:35 client[6] connecting to [localhost:8080]
+2017/04/09 23:12:35 client[11] brute-forcing removal of 337 packages
+2017/04/09 23:12:35 client[7] brute-forcing removal of 337 packages
+2017/04/09 23:12:35 client[5] brute-forcing removal of 337 packages
+2017/04/09 23:12:35 Starting client[4]
+2017/04/09 23:12:35 client[4] connecting to [localhost:8080]
+2017/04/09 23:12:35 Starting client[10]
+2017/04/09 23:12:35 client[10] connecting to [localhost:8080]
+2017/04/09 23:12:35 client[4] brute-forcing removal of 337 packages
+2017/04/09 23:12:35 client[9] brute-forcing removal of 337 packages
+2017/04/09 23:12:35 client[6] brute-forcing removal of 337 packages
+2017/04/09 23:12:35 client[2] brute-forcing removal of 337 packages
+2017/04/09 23:12:35 client[3] brute-forcing removal of 337 packages
+2017/04/09 23:12:35 client[10] brute-forcing removal of 337 packages
+2017/04/09 23:12:36 client[8] reports 0/337 packages still installed
+2017/04/09 23:12:36 client[8] disconnecting
+2017/04/09 23:12:36 client[11] reports 0/337 packages still installed
+2017/04/09 23:12:36 client[11] disconnecting
+2017/04/09 23:12:36 client[7] reports 0/337 packages still installed
+2017/04/09 23:12:36 client[7] disconnecting
+2017/04/09 23:12:36 client[5] reports 0/337 packages still installed
+2017/04/09 23:12:36 client[5] disconnecting
+2017/04/09 23:12:36 client[4] reports 0/337 packages still installed
+2017/04/09 23:12:36 client[4] disconnecting
+2017/04/09 23:12:36 client[6] reports 0/337 packages still installed
+2017/04/09 23:12:36 client[6] disconnecting
+2017/04/09 23:12:36 client[9] reports 0/337 packages still installed
+2017/04/09 23:12:36 client[9] disconnecting
+2017/04/09 23:12:36 client[2] reports 0/337 packages still installed
+2017/04/09 23:12:36 client[2] disconnecting
+2017/04/09 23:12:36 client[3] reports 0/337 packages still installed
+2017/04/09 23:12:36 client[3] disconnecting
+2017/04/09 23:12:36 client[10] reports 0/337 packages still installed
+2017/04/09 23:12:36 client[10] disconnecting
+2017/04/09 23:12:36 Step 2: Index all packages by brute-force
+2017/04/09 23:12:36 Starting client[13]
+2017/04/09 23:12:36 client[13] connecting to [localhost:8080]
+2017/04/09 23:12:36 Starting client[14]
+2017/04/09 23:12:36 client[14] connecting to [localhost:8080]
+2017/04/09 23:12:36 Starting client[16]
+2017/04/09 23:12:36 client[16] connecting to [localhost:8080]
+2017/04/09 23:12:36 Starting client[18]
+2017/04/09 23:12:36 client[18] connecting to [localhost:8080]
+2017/04/09 23:12:36 Starting client[12]
+2017/04/09 23:12:36 client[12] connecting to [localhost:8080]
+2017/04/09 23:12:36 Starting client[21]
+2017/04/09 23:12:36 client[21] connecting to [localhost:8080]
+2017/04/09 23:12:36 Starting client[15]
+2017/04/09 23:12:36 Starting client[17]
+2017/04/09 23:12:36 client[17] connecting to [localhost:8080]
+2017/04/09 23:12:36 Starting client[19]
+2017/04/09 23:12:36 client[19] connecting to [localhost:8080]
+2017/04/09 23:12:36 Starting client[20]
+2017/04/09 23:12:36 client[20] connecting to [localhost:8080]
+2017/04/09 23:12:36 client[12] brute-forcing indexing of 337 packages
+2017/04/09 23:12:36 client[13] brute-forcing indexing of 337 packages
+2017/04/09 23:12:36 client[15] connecting to [localhost:8080]
+2017/04/09 23:12:36 client[21] brute-forcing indexing of 337 packages
+2017/04/09 23:12:36 client[14] brute-forcing indexing of 337 packages
+2017/04/09 23:12:36 client[16] brute-forcing indexing of 337 packages
+2017/04/09 23:12:36 client[17] brute-forcing indexing of 337 packages
+2017/04/09 23:12:36 client[18] brute-forcing indexing of 337 packages
+2017/04/09 23:12:36 client[19] brute-forcing indexing of 337 packages
+2017/04/09 23:12:36 client[20] brute-forcing indexing of 337 packages
+2017/04/09 23:12:36 client[15] brute-forcing indexing of 337 packages
+2017/04/09 23:12:36 client[12] reports 187/337 packages indexed
+2017/04/09 23:12:36 client[13] reports 204/337 packages indexed
+2017/04/09 23:12:36 client[21] reports 203/337 packages indexed
+2017/04/09 23:12:36 client[14] reports 183/337 packages indexed
+2017/04/09 23:12:36 client[16] reports 190/337 packages indexed
+2017/04/09 23:12:36 client[20] reports 211/337 packages indexed
+2017/04/09 23:12:36 client[19] reports 172/337 packages indexed
+2017/04/09 23:12:36 client[17] reports 153/337 packages indexed
+2017/04/09 23:12:36 client[18] reports 193/337 packages indexed
+2017/04/09 23:12:36 client[15] reports 189/337 packages indexed
+2017/04/09 23:12:36 client[13] reports 286/337 packages indexed
+2017/04/09 23:12:36 client[12] reports 260/337 packages indexed
+2017/04/09 23:12:36 client[21] reports 266/337 packages indexed
+2017/04/09 23:12:36 client[16] reports 247/337 packages indexed
+2017/04/09 23:12:36 client[14] reports 260/337 packages indexed
+2017/04/09 23:12:36 client[20] reports 278/337 packages indexed
+2017/04/09 23:12:36 client[15] reports 268/337 packages indexed
+2017/04/09 23:12:36 client[19] reports 251/337 packages indexed
+2017/04/09 23:12:36 client[17] reports 244/337 packages indexed
+2017/04/09 23:12:36 client[18] reports 253/337 packages indexed
+2017/04/09 23:12:36 client[13] reports 303/337 packages indexed
+2017/04/09 23:12:36 client[12] reports 277/337 packages indexed
+2017/04/09 23:12:36 client[21] reports 293/337 packages indexed
+2017/04/09 23:12:36 client[14] reports 285/337 packages indexed
+2017/04/09 23:12:36 client[16] reports 276/337 packages indexed
+2017/04/09 23:12:36 client[20] reports 295/337 packages indexed
+2017/04/09 23:12:36 client[17] reports 264/337 packages indexed
+2017/04/09 23:12:36 client[19] reports 271/337 packages indexed
+2017/04/09 23:12:36 client[15] reports 282/337 packages indexed
+2017/04/09 23:12:36 client[18] reports 270/337 packages indexed
+2017/04/09 23:12:36 client[13] reports 308/337 packages indexed
+2017/04/09 23:12:36 client[12] reports 298/337 packages indexed
+2017/04/09 23:12:36 client[21] reports 300/337 packages indexed
+2017/04/09 23:12:36 client[16] reports 286/337 packages indexed
+2017/04/09 23:12:36 client[20] reports 299/337 packages indexed
+2017/04/09 23:12:36 client[14] reports 290/337 packages indexed
+2017/04/09 23:12:36 client[17] reports 277/337 packages indexed
+2017/04/09 23:12:36 client[19] reports 276/337 packages indexed
+2017/04/09 23:12:36 client[15] reports 296/337 packages indexed
+2017/04/09 23:12:36 client[18] reports 279/337 packages indexed
+2017/04/09 23:12:36 client[13] reports 314/337 packages indexed
+2017/04/09 23:12:36 client[21] reports 310/337 packages indexed
+2017/04/09 23:12:36 client[14] reports 295/337 packages indexed
+2017/04/09 23:12:36 client[16] reports 309/337 packages indexed
+2017/04/09 23:12:36 client[12] reports 306/337 packages indexed
+2017/04/09 23:12:36 client[20] reports 301/337 packages indexed
+2017/04/09 23:12:36 client[17] reports 283/337 packages indexed
+2017/04/09 23:12:36 client[19] reports 281/337 packages indexed
+2017/04/09 23:12:36 client[15] reports 300/337 packages indexed
+2017/04/09 23:12:36 client[18] reports 283/337 packages indexed
+2017/04/09 23:12:36 client[13] reports 319/337 packages indexed
+2017/04/09 23:12:36 client[14] reports 302/337 packages indexed
+2017/04/09 23:12:36 client[21] reports 311/337 packages indexed
+2017/04/09 23:12:36 client[20] reports 303/337 packages indexed
+2017/04/09 23:12:36 client[16] reports 314/337 packages indexed
+2017/04/09 23:12:36 client[12] reports 313/337 packages indexed
+2017/04/09 23:12:36 client[17] reports 291/337 packages indexed
+2017/04/09 23:12:36 client[19] reports 284/337 packages indexed
+2017/04/09 23:12:36 client[15] reports 312/337 packages indexed
+2017/04/09 23:12:36 client[18] reports 292/337 packages indexed
+2017/04/09 23:12:36 client[13] reports 325/337 packages indexed
+2017/04/09 23:12:36 client[21] reports 322/337 packages indexed
+2017/04/09 23:12:36 client[14] reports 310/337 packages indexed
+2017/04/09 23:12:36 client[20] reports 319/337 packages indexed
+2017/04/09 23:12:36 client[12] reports 328/337 packages indexed
+2017/04/09 23:12:36 client[16] reports 322/337 packages indexed
+2017/04/09 23:12:36 client[15] reports 320/337 packages indexed
+2017/04/09 23:12:36 client[17] reports 307/337 packages indexed
+2017/04/09 23:12:36 client[19] reports 306/337 packages indexed
+2017/04/09 23:12:36 client[18] reports 313/337 packages indexed
+2017/04/09 23:12:37 client[13] reports 333/337 packages indexed
+2017/04/09 23:12:37 client[14] reports 329/337 packages indexed
+2017/04/09 23:12:37 client[20] reports 334/337 packages indexed
+2017/04/09 23:12:37 client[12] reports 334/337 packages indexed
+2017/04/09 23:12:37 client[16] reports 331/337 packages indexed
+2017/04/09 23:12:37 client[21] reports 333/337 packages indexed
+2017/04/09 23:12:37 client[15] reports 329/337 packages indexed
+2017/04/09 23:12:37 client[19] reports 328/337 packages indexed
+2017/04/09 23:12:37 client[17] reports 331/337 packages indexed
+2017/04/09 23:12:37 client[18] reports 333/337 packages indexed
+2017/04/09 23:12:37 client[13] reports 336/337 packages indexed
+2017/04/09 23:12:37 client[14] reports 336/337 packages indexed
+2017/04/09 23:12:37 client[12] reports 336/337 packages indexed
+2017/04/09 23:12:37 client[16] reports 334/337 packages indexed
+2017/04/09 23:12:37 client[15] reports 333/337 packages indexed
+2017/04/09 23:12:37 client[21] reports 336/337 packages indexed
+2017/04/09 23:12:37 client[20] reports 336/337 packages indexed
+2017/04/09 23:12:37 client[19] reports 336/337 packages indexed
+2017/04/09 23:12:37 client[17] reports 337/337 packages indexed
+2017/04/09 23:12:37 client[17] disconnecting
+2017/04/09 23:12:37 client[18] reports 336/337 packages indexed
+2017/04/09 23:12:37 client[13] reports 337/337 packages indexed
+2017/04/09 23:12:37 client[13] disconnecting
+2017/04/09 23:12:37 client[14] reports 337/337 packages indexed
+2017/04/09 23:12:37 client[14] disconnecting
+2017/04/09 23:12:37 client[12] reports 337/337 packages indexed
+2017/04/09 23:12:37 client[12] disconnecting
+2017/04/09 23:12:37 client[20] reports 337/337 packages indexed
+2017/04/09 23:12:37 client[20] disconnecting
+2017/04/09 23:12:37 client[15] reports 337/337 packages indexed
+2017/04/09 23:12:37 client[15] disconnecting
+2017/04/09 23:12:37 client[16] reports 337/337 packages indexed
+2017/04/09 23:12:37 client[16] disconnecting
+2017/04/09 23:12:37 client[21] reports 337/337 packages indexed
+2017/04/09 23:12:37 client[21] disconnecting
+2017/04/09 23:12:37 client[19] reports 337/337 packages indexed
+2017/04/09 23:12:37 client[19] disconnecting
+2017/04/09 23:12:37 client[18] reports 337/337 packages indexed
+2017/04/09 23:12:37 client[18] disconnecting
+2017/04/09 23:12:37 Step 3: Verify if all packages were correctly indexed
+2017/04/09 23:12:37 Starting client[24]
+2017/04/09 23:12:37 client[24] connecting to [localhost:8080]
+2017/04/09 23:12:37 Starting client[25]
+2017/04/09 23:12:37 client[25] connecting to [localhost:8080]
+2017/04/09 23:12:37 Starting client[27]
+2017/04/09 23:12:37 client[27] connecting to [localhost:8080]
+2017/04/09 23:12:37 Starting client[29]
+2017/04/09 23:12:37 client[29] connecting to [localhost:8080]
+2017/04/09 23:12:37 Starting client[30]
+2017/04/09 23:12:37 client[30] connecting to [localhost:8080]
+2017/04/09 23:12:37 Starting client[31]
+2017/04/09 23:12:37 client[31] connecting to [localhost:8080]
+2017/04/09 23:12:37 client[24] querying for 337 packages and expecting status code to be [OK]
+2017/04/09 23:12:37 Starting client[28]
+2017/04/09 23:12:37 client[28] connecting to [localhost:8080]
+2017/04/09 23:12:37 Starting client[22]
+2017/04/09 23:12:37 client[22] connecting to [localhost:8080]
+2017/04/09 23:12:37 Starting client[23]
+2017/04/09 23:12:37 client[23] connecting to [localhost:8080]
+2017/04/09 23:12:37 Starting client[26]
+2017/04/09 23:12:37 client[26] connecting to [localhost:8080]
+2017/04/09 23:12:37 client[30] querying for 337 packages and expecting status code to be [OK]
+2017/04/09 23:12:37 client[31] querying for 337 packages and expecting status code to be [OK]
+2017/04/09 23:12:37 client[25] querying for 337 packages and expecting status code to be [OK]
+2017/04/09 23:12:37 client[27] querying for 337 packages and expecting status code to be [OK]
+2017/04/09 23:12:37 client[28] querying for 337 packages and expecting status code to be [OK]
+2017/04/09 23:12:37 client[29] querying for 337 packages and expecting status code to be [OK]
+2017/04/09 23:12:37 client[22] querying for 337 packages and expecting status code to be [OK]
+2017/04/09 23:12:37 client[23] querying for 337 packages and expecting status code to be [OK]
+2017/04/09 23:12:37 client[26] querying for 337 packages and expecting status code to be [OK]
+2017/04/09 23:12:37 client[24] disconnecting
+2017/04/09 23:12:37 client[30] disconnecting
+2017/04/09 23:12:37 client[31] disconnecting
+2017/04/09 23:12:37 client[27] disconnecting
+2017/04/09 23:12:37 client[25] disconnecting
+2017/04/09 23:12:37 client[28] disconnecting
+2017/04/09 23:12:37 client[23] disconnecting
+2017/04/09 23:12:37 client[29] disconnecting
+2017/04/09 23:12:37 client[22] disconnecting
+2017/04/09 23:12:37 client[26] disconnecting
+2017/04/09 23:12:37 Step 4: Remove all installed packages
+2017/04/09 23:12:37 Starting client[32]
+2017/04/09 23:12:37 client[32] connecting to [localhost:8080]
+2017/04/09 23:12:37 Starting client[33]
+2017/04/09 23:12:37 Starting client[41]
+2017/04/09 23:12:37 client[41] connecting to [localhost:8080]
+2017/04/09 23:12:37 Starting client[37]
+2017/04/09 23:12:37 Starting client[38]
+2017/04/09 23:12:37 client[38] connecting to [localhost:8080]
+2017/04/09 23:12:37 Starting client[40]
+2017/04/09 23:12:37 client[40] connecting to [localhost:8080]
+2017/04/09 23:12:37 Starting client[35]
+2017/04/09 23:12:37 client[35] connecting to [localhost:8080]
+2017/04/09 23:12:37 client[32] brute-forcing removal of 337 packages
+2017/04/09 23:12:37 Starting client[36]
+2017/04/09 23:12:37 client[36] connecting to [localhost:8080]
+2017/04/09 23:12:37 client[41] brute-forcing removal of 337 packages
+2017/04/09 23:12:37 Starting client[39]
+2017/04/09 23:12:37 client[39] connecting to [localhost:8080]
+2017/04/09 23:12:37 client[38] brute-forcing removal of 337 packages
+2017/04/09 23:12:37 client[33] connecting to [localhost:8080]
+2017/04/09 23:12:37 client[40] brute-forcing removal of 337 packages
+2017/04/09 23:12:37 client[35] brute-forcing removal of 337 packages
+2017/04/09 23:12:37 client[37] connecting to [localhost:8080]
+2017/04/09 23:12:37 Starting client[34]
+2017/04/09 23:12:37 client[34] connecting to [localhost:8080]
+2017/04/09 23:12:37 client[39] brute-forcing removal of 337 packages
+2017/04/09 23:12:37 client[33] brute-forcing removal of 337 packages
+2017/04/09 23:12:37 client[36] brute-forcing removal of 337 packages
+2017/04/09 23:12:37 client[34] brute-forcing removal of 337 packages
+2017/04/09 23:12:37 client[37] brute-forcing removal of 337 packages
+2017/04/09 23:12:37 client[32] reports 245/337 packages still installed
+2017/04/09 23:12:37 client[38] reports 151/337 packages still installed
+2017/04/09 23:12:37 client[41] reports 119/337 packages still installed
+2017/04/09 23:12:37 client[33] reports 209/337 packages still installed
+2017/04/09 23:12:37 client[34] reports 166/337 packages still installed
+2017/04/09 23:12:37 client[40] reports 127/337 packages still installed
+2017/04/09 23:12:37 client[35] reports 159/337 packages still installed
+2017/04/09 23:12:37 client[36] reports 169/337 packages still installed
+2017/04/09 23:12:37 client[39] reports 131/337 packages still installed
+2017/04/09 23:12:37 client[37] reports 155/337 packages still installed
+2017/04/09 23:12:37 client[32] reports 219/337 packages still installed
+2017/04/09 23:12:37 client[33] reports 155/337 packages still installed
+2017/04/09 23:12:37 client[34] reports 129/337 packages still installed
+2017/04/09 23:12:37 client[41] reports 81/337 packages still installed
+2017/04/09 23:12:37 client[40] reports 83/337 packages still installed
+2017/04/09 23:12:37 client[35] reports 112/337 packages still installed
+2017/04/09 23:12:38 client[38] reports 93/337 packages still installed
+2017/04/09 23:12:38 client[36] reports 100/337 packages still installed
+2017/04/09 23:12:38 client[39] reports 67/337 packages still installed
+2017/04/09 23:12:38 client[37] reports 81/337 packages still installed
+2017/04/09 23:12:38 client[32] reports 146/337 packages still installed
+2017/04/09 23:12:38 client[33] reports 70/337 packages still installed
+2017/04/09 23:12:38 client[40] reports 28/337 packages still installed
+2017/04/09 23:12:38 client[34] reports 50/337 packages still installed
+2017/04/09 23:12:38 client[41] reports 29/337 packages still installed
+2017/04/09 23:12:38 client[39] reports 29/337 packages still installed
+2017/04/09 23:12:38 client[35] reports 45/337 packages still installed
+2017/04/09 23:12:38 client[36] reports 30/337 packages still installed
+2017/04/09 23:12:38 client[38] reports 22/337 packages still installed
+2017/04/09 23:12:38 client[37] reports 27/337 packages still installed
+2017/04/09 23:12:38 client[32] reports 103/337 packages still installed
+2017/04/09 23:12:38 client[33] reports 30/337 packages still installed
+2017/04/09 23:12:38 client[40] reports 7/337 packages still installed
+2017/04/09 23:12:38 client[34] reports 17/337 packages still installed
+2017/04/09 23:12:38 client[41] reports 4/337 packages still installed
+2017/04/09 23:12:38 client[39] reports 7/337 packages still installed
+2017/04/09 23:12:38 client[35] reports 10/337 packages still installed
+2017/04/09 23:12:38 client[36] reports 1/337 packages still installed
+2017/04/09 23:12:38 client[38] reports 6/337 packages still installed
+2017/04/09 23:12:38 client[37] reports 5/337 packages still installed
+2017/04/09 23:12:38 client[32] reports 79/337 packages still installed
+2017/04/09 23:12:38 client[33] reports 13/337 packages still installed
+2017/04/09 23:12:38 client[40] reports 2/337 packages still installed
+2017/04/09 23:12:38 client[34] reports 6/337 packages still installed
+2017/04/09 23:12:38 client[41] reports 0/337 packages still installed
+2017/04/09 23:12:38 client[41] disconnecting
+2017/04/09 23:12:38 client[39] reports 0/337 packages still installed
+2017/04/09 23:12:38 client[39] disconnecting
+2017/04/09 23:12:38 client[35] reports 3/337 packages still installed
+2017/04/09 23:12:38 client[36] reports 3/337 packages still installed
+2017/04/09 23:12:38 client[38] reports 2/337 packages still installed
+2017/04/09 23:12:38 client[37] reports 0/337 packages still installed
+2017/04/09 23:12:38 client[37] disconnecting
+2017/04/09 23:12:38 client[32] reports 59/337 packages still installed
+2017/04/09 23:12:38 client[40] reports 0/337 packages still installed
+2017/04/09 23:12:38 client[40] disconnecting
+2017/04/09 23:12:38 client[33] reports 8/337 packages still installed
+2017/04/09 23:12:38 client[34] reports 0/337 packages still installed
+2017/04/09 23:12:38 client[34] disconnecting
+2017/04/09 23:12:38 client[35] reports 1/337 packages still installed
+2017/04/09 23:12:38 client[38] reports 3/337 packages still installed
+2017/04/09 23:12:38 client[36] reports 0/337 packages still installed
+2017/04/09 23:12:38 client[36] disconnecting
+2017/04/09 23:12:38 client[32] reports 51/337 packages still installed
+2017/04/09 23:12:38 client[33] reports 1/337 packages still installed
+2017/04/09 23:12:38 client[35] reports 0/337 packages still installed
+2017/04/09 23:12:38 client[35] disconnecting
+2017/04/09 23:12:38 client[38] reports 2/337 packages still installed
+2017/04/09 23:12:38 client[32] reports 41/337 packages still installed
+2017/04/09 23:12:38 client[33] reports 1/337 packages still installed
+2017/04/09 23:12:38 client[38] reports 1/337 packages still installed
+2017/04/09 23:12:38 client[32] reports 34/337 packages still installed
+2017/04/09 23:12:38 client[33] reports 1/337 packages still installed
+2017/04/09 23:12:38 client[38] reports 0/337 packages still installed
+2017/04/09 23:12:38 client[38] disconnecting
+2017/04/09 23:12:38 client[32] reports 27/337 packages still installed
+2017/04/09 23:12:38 client[33] reports 1/337 packages still installed
+2017/04/09 23:12:38 client[32] reports 20/337 packages still installed
+2017/04/09 23:12:38 client[33] reports 1/337 packages still installed
+2017/04/09 23:12:38 client[32] reports 16/337 packages still installed
+2017/04/09 23:12:38 client[33] reports 1/337 packages still installed
+2017/04/09 23:12:38 client[32] reports 12/337 packages still installed
+2017/04/09 23:12:38 client[33] reports 0/337 packages still installed
+2017/04/09 23:12:38 client[33] disconnecting
+2017/04/09 23:12:38 client[32] reports 5/337 packages still installed
+2017/04/09 23:12:38 client[32] reports 2/337 packages still installed
+2017/04/09 23:12:38 client[32] reports 0/337 packages still installed
+2017/04/09 23:12:38 client[32] disconnecting
+2017/04/09 23:12:38 Step 5: Verify if all packages were correctly removed
+2017/04/09 23:12:38 Starting client[51]
+2017/04/09 23:12:38 client[51] connecting to [localhost:8080]
+2017/04/09 23:12:38 Starting client[48]
+2017/04/09 23:12:38 Starting client[47]
+2017/04/09 23:12:38 client[47] connecting to [localhost:8080]
+2017/04/09 23:12:38 Starting client[43]
+2017/04/09 23:12:38 client[43] connecting to [localhost:8080]
+2017/04/09 23:12:38 client[47] querying for 337 packages and expecting status code to be [FAIL]
+2017/04/09 23:12:38 client[43] querying for 337 packages and expecting status code to be [FAIL]
+2017/04/09 23:12:38 Starting client[49]
+2017/04/09 23:12:38 client[49] connecting to [localhost:8080]
+2017/04/09 23:12:38 Starting client[46]
+2017/04/09 23:12:38 client[46] connecting to [localhost:8080]
+2017/04/09 23:12:38 client[49] querying for 337 packages and expecting status code to be [FAIL]
+2017/04/09 23:12:38 Starting client[44]
+2017/04/09 23:12:38 client[44] connecting to [localhost:8080]
+2017/04/09 23:12:38 Starting client[45]
+2017/04/09 23:12:38 client[45] connecting to [localhost:8080]
+2017/04/09 23:12:38 client[44] querying for 337 packages and expecting status code to be [FAIL]
+2017/04/09 23:12:38 client[48] connecting to [localhost:8080]
+2017/04/09 23:12:38 client[51] querying for 337 packages and expecting status code to be [FAIL]
+2017/04/09 23:12:38 client[46] querying for 337 packages and expecting status code to be [FAIL]
+2017/04/09 23:12:38 Starting client[42]
+2017/04/09 23:12:38 client[42] connecting to [localhost:8080]
+2017/04/09 23:12:38 Starting client[50]
+2017/04/09 23:12:38 client[50] connecting to [localhost:8080]
+2017/04/09 23:12:38 client[48] querying for 337 packages and expecting status code to be [FAIL]
+2017/04/09 23:12:38 client[45] querying for 337 packages and expecting status code to be [FAIL]
+2017/04/09 23:12:38 client[42] querying for 337 packages and expecting status code to be [FAIL]
+2017/04/09 23:12:38 client[50] querying for 337 packages and expecting status code to be [FAIL]
+2017/04/09 23:12:38 client[43] disconnecting
+2017/04/09 23:12:38 client[47] disconnecting
+2017/04/09 23:12:39 client[49] disconnecting
+2017/04/09 23:12:39 client[44] disconnecting
+2017/04/09 23:12:39 client[51] disconnecting
+2017/04/09 23:12:39 client[46] disconnecting
+2017/04/09 23:12:39 client[48] disconnecting
+2017/04/09 23:12:39 client[45] disconnecting
+2017/04/09 23:12:39 client[42] disconnecting
+2017/04/09 23:12:39 client[50] disconnecting
+2017/04/09 23:12:39 TESTRUN - FINISHED (took 3375ms 3.3755022s)
+2017/04/09 23:12:39 ================
+2017/04/09 23:12:39 All tests passed!
+2017/04/09 23:12:39 ================
+2017/04/09 23:12:39 TESTRUN finished! (took 3377ms)

@@ -27,31 +27,20 @@ public class PackageIndexer implements IPackageIndexer {
 			 */
 			logger.info("Adding to index store package ::" + aPackage);
 			synchronized (indexStore) {
-				indexStore.getAllUniquePackages().add(aPackage);
-				addDependency(aPackage, dependencies);
+				indexStore.getIndexDependencies().put(aPackage, dependencies);
 			}
 			return Response.OK.toString();
 		}
 		return Response.FAIL.toString();
 	}
 
-	/**
-	 * This method store the dependencies provide for given package
-	 * 
-	 * @param aPackage
-	 *            is PackageName
-	 * @param dependencies
-	 *            is List of dependencies for package
-	 */
-	private void addDependency(String aPackage, List<String> dependencies) {
-		if (aPackage != null && dependencies != null) {
-			indexStore.getIndexDependencies().put(aPackage, dependencies);
-		}
-	}
-
 	@Override
 	public String queryPackage(String aPackage) {
-		return indexStore.getAllUniquePackages().contains(aPackage) ? Response.OK.toString() : Response.FAIL.toString();
+		return isPackageInStore(aPackage) ? Response.OK.toString() : Response.FAIL.toString();
+	}
+	
+	private boolean isPackageInStore(String aPackage){
+		return indexStore.getIndexDependencies().keySet().contains(aPackage); 
 	}
 
 	@Override
@@ -63,7 +52,6 @@ public class PackageIndexer implements IPackageIndexer {
 			 */
 			logger.info("Removing from index store package ::" + aPackage);
 			synchronized (indexStore) {
-				indexStore.getAllUniquePackages().remove(aPackage);
 				indexStore.getIndexDependencies().remove(aPackage);
 			}
 			return Response.OK.toString();
@@ -82,7 +70,8 @@ public class PackageIndexer implements IPackageIndexer {
 	private boolean isPackageADependency(String aPackage) {
 		Iterator<List<String>> itrDependencies = indexStore.getIndexDependencies().values().iterator();
 		while (itrDependencies.hasNext()) {
-			if (itrDependencies.next().contains(aPackage))
+			List<String> dependencies = itrDependencies.next();
+			if (dependencies != null && dependencies.contains(aPackage))
 				return true;
 		}
 		return false;
@@ -98,7 +87,7 @@ public class PackageIndexer implements IPackageIndexer {
 		if (dependencies == null || dependencies.size() < 1)
 			return true;
 		for (String dependency : dependencies) {
-			if (indexStore.getAllUniquePackages().contains(dependency))
+			if (isPackageInStore(dependency))
 				continue;
 			return false;
 		}

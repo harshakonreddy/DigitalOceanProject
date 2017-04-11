@@ -1,0 +1,4 @@
+mvn compile
+mvn test
+mvn exec:java -Dexec.mainClass="com.digitalocean.packageindex.server.PackageIndexingServer" &
+mvn install

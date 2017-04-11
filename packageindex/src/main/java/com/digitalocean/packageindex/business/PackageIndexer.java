@@ -2,9 +2,11 @@ package com.digitalocean.packageindex.business;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.logging.Logger;
 
 import com.digitalocean.packageindex.data.PackageIndexDataStore;
 import com.digitalocean.packageindex.data.Response;
+import com.digitalocean.packageindex.log.PackageIndexLogger;
 
 /**
  * The Class PackageIndexer is responsible for maintaining the index of packages.
@@ -14,12 +16,14 @@ public class PackageIndexer implements IPackageIndexer {
 
 	/** Object that stores the packages and their dependencies. */
 	private static PackageIndexDataStore<String> indexStore = new PackageIndexDataStore<>();
+	private final Logger logger=PackageIndexLogger.LOGGER;
 	
 	@Override
 	public String indexPackage(String aPackage,List<String> dependencies) {
-		if(aPackage!=null && verifyDependencies(dependencies)) {
+		if(aPackage!=null && !aPackage.trim().isEmpty() && verifyDependencies(dependencies)) {
 			/* Synchronize indexing of package and dependencies to 
 			 * avoid race condition and inconsistency */
+			logger.info("Adding to index store package ::"+aPackage);
 			synchronized (indexStore) {
 				indexStore.getAllUniquePackages().add(aPackage);
 				addDependency(aPackage, dependencies);
@@ -51,6 +55,7 @@ public class PackageIndexer implements IPackageIndexer {
 		if(!isPackageADependency(aPackage)) {
 			/* Synchronize removing of package and dependencies to 
 			 * avoid race condition and inconsistency */
+			logger.info("Removing from index store package ::"+aPackage);
 			synchronized (indexStore) {
 				indexStore.getAllUniquePackages().remove(aPackage);
 				indexStore.getIndexDependencies().remove(aPackage);

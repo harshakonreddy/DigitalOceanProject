@@ -2,10 +2,12 @@ package com.digitalocean.packageindex.business;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.logging.Logger;
 
 import com.digitalocean.packageindex.data.Command;
 import com.digitalocean.packageindex.data.PackageInputBean;
 import com.digitalocean.packageindex.data.Response;
+import com.digitalocean.packageindex.log.PackageIndexLogger;
 
 /**
  * The Class InputHandler is responsible for parsing the input and
@@ -14,6 +16,7 @@ import com.digitalocean.packageindex.data.Response;
 public class InputHandler implements IInputHandler{
 
 	private IPackageIndexer packageIndexer = new PackageIndexer();
+	private final Logger logger=PackageIndexLogger.LOGGER;
 	
 	// Delimiters
 	public static final String LINE_DELIMITER = "\n";
@@ -25,6 +28,7 @@ public class InputHandler implements IInputHandler{
 	public PackageInputBean getPackageInputBean(String input) {
 
 		if(isInValidInput(input)) return null;
+		logger.info("Is valid input, continuing processing for "+input);
 		
 		String[] inputParameters = input.split(String.valueOf(PARAM_DELIMITER_REGEX));
 		PackageInputBean packageInputBean = new PackageInputBean();
@@ -75,9 +79,9 @@ public class InputHandler implements IInputHandler{
 
 	@Override
 	public String executeCommand(PackageInputBean packageInputBean) {
+		logger.info("Executing command "+packageInputBean.getCommand()+" for package "+packageInputBean.getPackageName());
 		String response = "";
 		if(packageInputBean.getCommand().equalsIgnoreCase(Command.INDEX.toString())) {
-			// think of case where dependency is same as package
 			response = packageIndexer.indexPackage(packageInputBean.getPackageName(),packageInputBean.getDependencies());
 		} else if(packageInputBean.getCommand().equalsIgnoreCase(Command.QUERY.toString())) {
 			response = packageIndexer.queryPackage(packageInputBean.getPackageName());

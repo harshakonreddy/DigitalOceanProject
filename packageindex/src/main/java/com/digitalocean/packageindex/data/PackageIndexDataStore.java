@@ -11,10 +11,6 @@ public class PackageIndexDataStore<T> {
 	private Set<T> allUniquePackages = new HashSet<T>();
 	private Map<T,List<T>> indexDependencies = new HashMap<T,List<T>>();
 	
-	/*PackageIndexDataStore() {
-		allUniquePackages = new HashSet<String>();
-		indexDependencies = new HashMap<String,List<String>>();
-	}*/
 	public Set<T> getAllUniquePackages() {
 		return allUniquePackages;
 	}

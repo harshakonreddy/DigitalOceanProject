@@ -19,7 +19,6 @@ public class PackageIndexerTest {
 		pi.indexPackage("A",null);
 	}
 	
-	
 	@Test
 	public void indexPackage_Success() {
 		

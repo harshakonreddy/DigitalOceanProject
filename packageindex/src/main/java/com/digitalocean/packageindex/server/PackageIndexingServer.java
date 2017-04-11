@@ -3,7 +3,9 @@ package com.digitalocean.packageindex.server;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.logging.Logger;
 
+import com.digitalocean.packageindex.log.PackageIndexLogger;
 /**
  * The Class PackageIndexingServer opens a server socket and
  * accepts client connections.
@@ -14,6 +16,7 @@ public class PackageIndexingServer {
 	
 	static int clientCount = 0;
 	ServerSocket socket = null;
+	private final Logger logger=PackageIndexLogger.LOGGER;
 
 	/**
 	 * Method to Start server, opens a TCP server socket on given port
@@ -24,8 +27,9 @@ public class PackageIndexingServer {
 	public void startServer(int port) {
 		try {
 			socket = new ServerSocket(port);
+			logger.info("Server started... Accepting clients");
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.severe("Could not open socket at port "+port+". Verify if port is free");
 		}
 	}
    
@@ -35,8 +39,9 @@ public class PackageIndexingServer {
 	public void stopServer() {
 		try {
 			socket.close();
+			logger.info("Server stopped!!!");
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.severe("Error when closing socket");
 		}
 	}
 	
@@ -49,13 +54,13 @@ public class PackageIndexingServer {
 			 while(true) {
 				Socket clientConn = socket.accept();
 				clientCount++;
-				System.out.println("Accepted client " + clientCount + " connection");
+				logger.info("Accepted client " + clientCount + " connection");
 				IndexingServiceProvider indexService = new IndexingServiceProvider(clientConn);
 				Thread clientThread = new Thread(indexService,"Thread_"+clientCount);
 				clientThread.start();
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.severe("Error accepting client connection...");
 		}
    }
 	

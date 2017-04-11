@@ -43,32 +43,59 @@ public class InputHandlerTest {
         inputParseFailure.add("command|package"); //1 pipe
         inputParseFailure.add("command||"); // package is empty
 		
-        PackageInputBean successInputForIndex = getNewPackageInutBean(Command.INDEX.toString(),"A1",null);
+        /* SUCCESS cases for executeCommand */
+        
+        //INDEX a new package with empty dependencies
+        PackageInputBean successInputForIndex = getNewPackageInutBean(Command.INDEX.toString(),"A1");
+        inputExecuteSuccess.add(successInputForIndex);
+        successInputForIndex = getNewPackageInutBean(Command.INDEX.toString(),"A2");
         inputExecuteSuccess.add(successInputForIndex);
         
-        successInputForIndex = getNewPackageInutBean(Command.INDEX.toString(),"A2",null);
-        inputExecuteSuccess.add(successInputForIndex);
-        
+        //INDEX package with dependencies; dependencies were already indexed
         successInputForIndex = getNewPackageInutBean(Command.INDEX.toString(),"A",Arrays.asList("A1"));
         inputExecuteSuccess.add(successInputForIndex);
+        successInputForIndex = getNewPackageInutBean(Command.INDEX.toString(),"B",Arrays.asList("A1"));
+        inputExecuteSuccess.add(successInputForIndex);
         
-        //update existing package with new dependencies
+        
+        //INDEX existing package with new dependencies;  dependencies were already indexed
         successInputForIndex = getNewPackageInutBean(Command.INDEX.toString(),"A",Arrays.asList("A1","A2"));
         inputExecuteSuccess.add(successInputForIndex);
         
-        successInputForIndex = getNewPackageInutBean(Command.INDEX.toString(),"B",Arrays.asList("A1"));
-        inputExecuteSuccess.add(successInputForIndex);
-                
-        PackageInputBean successInputForQuery = getNewPackageInutBean(Command.QUERY.toString(),"A1",null);
+        //QUERY for package with no dependencies
+        PackageInputBean successInputForQuery = getNewPackageInutBean(Command.QUERY.toString(),"A1");
         inputExecuteSuccess.add(successInputForQuery);
         
-        successInputForQuery = getNewPackageInutBean(Command.QUERY.toString(),"A",null);
+        //QUERY for package with dependencies
+        successInputForQuery = getNewPackageInutBean(Command.QUERY.toString(),"A");
         inputExecuteSuccess.add(successInputForQuery);
         
-        PackageInputBean successInputForRemove = getNewPackageInutBean(Command.REMOVE.toString(),"A",null);
+        //REMOVE package that is already indexed
+        PackageInputBean successInputForRemove = getNewPackageInutBean(Command.REMOVE.toString(),"A");
         inputExecuteSuccess.add(successInputForRemove);
         
-        PackageInputBean errorInput = getNewPackageInutBean("INVALID","ABC",null);
+        //REMOVE package that is never indexed
+        successInputForRemove = getNewPackageInutBean(Command.REMOVE.toString(),"C");
+        inputExecuteSuccess.add(successInputForRemove);
+        
+        /* FAILURE cases for executeCommand */
+        //INDEX package with dependencies that are not indexed
+        PackageInputBean failureInputForIndex = getNewPackageInutBean(Command.INDEX.toString(),"B",Arrays.asList("B1", "B2"));
+        inputExecuteFailure.add(failureInputForIndex);
+
+
+        /*//REMOVE package; other indexed package(B) depends on it
+        PackageInputBean failureInputForRemove = getNewPackageInutBean(Command.REMOVE.toString(),"A1");
+        inputExecuteFailure.add(failureInputForRemove);*/
+
+
+        //QUERY package; package is never indexed
+        PackageInputBean failureInputForQuery = getNewPackageInutBean(Command.QUERY.toString(),"C");
+        inputExecuteFailure.add(failureInputForQuery);
+        
+        /* ERROR cases for executeCommand */
+        // Try to execute command other than INDEX,QUERY,REMOVE
+        PackageInputBean errorInput = getNewPackageInutBean("INVALID","ABC");
 		inputExecuteError.add(errorInput);
 	}
 	
@@ -92,7 +119,8 @@ public class InputHandlerTest {
     public void executeCommand_Success() {
         
         for (PackageInputBean input : inputExecuteSuccess) {
-            Assert.assertEquals(inputHandler.executeCommand(input),Response.OK.toString()+InputHandler.LINE_DELIMITER);
+            Assert.assertEquals("Executing for " +input.getCommand()+InputHandler.PARAM_DELIMITER+input.getPackageName(),
+            		inputHandler.executeCommand(input),Response.OK.toString()+InputHandler.LINE_DELIMITER);
         }
     }
     
@@ -100,7 +128,8 @@ public class InputHandlerTest {
     public void executeCommand_Failure() {
         
         for (PackageInputBean input : inputExecuteFailure) {
-            Assert.assertEquals(inputHandler.executeCommand(input),Response.FAIL.toString()+InputHandler.LINE_DELIMITER);
+            Assert.assertEquals("Executing for " +input.getCommand()+InputHandler.PARAM_DELIMITER+input.getPackageName(),
+            		inputHandler.executeCommand(input),Response.FAIL.toString()+InputHandler.LINE_DELIMITER);
         }
     }
     
@@ -108,8 +137,14 @@ public class InputHandlerTest {
     public void executeCommand_Error() {
         
         for (PackageInputBean input : inputExecuteError) {
-            Assert.assertEquals(inputHandler.executeCommand(input),Response.ERROR.toString()+InputHandler.LINE_DELIMITER);
+            Assert.assertEquals("Executing for " +input.getCommand()+InputHandler.PARAM_DELIMITER+input.getPackageName(),
+            		inputHandler.executeCommand(input),Response.ERROR.toString()+InputHandler.LINE_DELIMITER);
         }
+    }
+    
+    private static PackageInputBean getNewPackageInutBean(String command, String aPackage) {
+    	
+    	return getNewPackageInutBean(command,aPackage,null);
     }
     
     private static PackageInputBean getNewPackageInutBean(String command, String aPackage, List<String> dependencies) {
